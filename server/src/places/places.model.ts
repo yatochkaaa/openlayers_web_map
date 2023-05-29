@@ -3,8 +3,8 @@ import { Table, Column, Model, DataType } from 'sequelize-typescript';
 interface PlaceCreationAttrs {
   name: string;
   description: string;
-  latitude: number;
-  longitude: number;
+  latitude: string;
+  longitude: string;
 }
 
 @Table({ tableName: 'places' })
@@ -28,9 +28,9 @@ export class Place extends Model<Place, PlaceCreationAttrs> {
   })
   description: string;
 
-  @Column({ type: DataType.INTEGER })
-  latitude: number;
+  @Column({ type: DataType.STRING })
+  latitude: string;
 
-  @Column({ type: DataType.INTEGER })
-  longitude: number;
+  @Column({ type: DataType.STRING })
+  longitude: string;
 }
