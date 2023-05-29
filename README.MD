@@ -4,6 +4,8 @@
 
 * Fork the repository
 * Clone the forked repo
+* Open pgAdmin and select New Database
+* In New Database, enter a database name `webmap` and select Save
 * Open terminal and write `cd client` to open `Client` directory
 * Open one more terminal and write `cd server` to open `Server` directory
 
