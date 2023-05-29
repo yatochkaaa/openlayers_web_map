@@ -8,11 +8,59 @@
       href="https://openlayers.org/favicon.ico"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unpkg.com/ol-popup@5.0.0/src/ol-popup.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/ol-popup@5.0.0/src/ol-popup.css"
+    />
     <title>Openlayers web map</title>
   </head>
   <body>
-    <div id="map"></div>
-    <script type="module" src="./main.js"></script>
+    <div id="map">
+      <form class="map__form form" id="form" action="" method="post">
+        <span class="form__title">Добавить метку</span>
+        <input
+          id="name"
+          class="form__name"
+          type="text"
+          name="name"
+          placeholder="Название"
+          required
+        />
+
+        <textarea
+          id="description"
+          class="form__description"
+          name="description"
+          placeholder="Описание"
+        ></textarea>
+
+        <input
+          id="latitude"
+          class="form__latitude"
+          type="number"
+          name="latitude"
+          placeholder="Широта"
+          step="any"
+          required
+        />
+
+        <input
+          id="longitude"
+          class="form__longitude"
+          type="number"
+          name="longitude"
+          placeholder="Долгота"
+          step="any"
+          required
+        />
+
+        <button class="form__button" type="submit">Добавить</button>
+      </form>
+    </div>
+
+    <script type="module" src="./src/mock/mock.js"></script>
+    <script type="module" src="./src/utils/onSubmit.js"></script>
+    <script type="module" src="./src/utils/addMarker.js"></script>
+    <script type="module" src="./src/main.js"></script>
   </body>
 </html>
