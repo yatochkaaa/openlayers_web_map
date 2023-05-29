@@ -11,7 +11,10 @@ const addMarker = (map, coords, title, description) => {
   map.addOverlay(popup);
 
   marker.on("click", function () {
-    popup.show(marker.getLocation(), marker.get(title));
+    popup.show(
+      marker.getLocation(),
+      `<div><b>${title}</b><br/>${description}</div>`
+    );
   });
 };
 
